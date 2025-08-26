@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Collapsible Sidebar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sidebar" id="sidebar">
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    <button class = "active" onclick="location.href='home.html'">
+      🏠 <span class="label">Home</span>
+    </button>
+    <button onclick="location.href='contractor.html'">
+      👷 <span class="label">Find a Contractor</span>
+    </button>
+    <button onclick="location.href='image_analyzer.html'">
+      🖼️ <span class="label">Image Analyzer</span>
+    </button>
+    <button onclick="location.href='about.html'">
+      ℹ️ <span class="label">About</span>
+    </button>
+  </div>
+
+  <div class="main-content" id="main">
+    <nav>
+      <h1>Congressional App Challenge</h1>
+    </nav>
+    <main>
+      <section class="hero">
+        <h2>Welcome!</h2>
+        <p>This is the home page with a collapsible sidebar.</p>
+      </section>
+    </main>
+    <footer>
+      &copy; 2025 My Web App
+    </footer>
+  </div>
+
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("collapsed");
+    }
+  </script>
+</body>
+</html>

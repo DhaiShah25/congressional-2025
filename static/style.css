@@ -1,3 +1,113 @@
-:root {
-  color-scheme: light dark;
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 30%);
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: between;
+}
+
+a {
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 12px;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+.sidebar a:hover {
+  background: #444;
+  color: #fff;
+}
+
+.sidebar a.active {
+  background: #444;
+  color: #fff;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #222;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar button {
+  background: none;
+  border: none;
+  color: #ddd;
+  padding: 12px;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+.sidebar button:hover {
+  background: #444;
+  color: #fff;
+}
+
+.sidebar button.active {
+  background: #444;
+  color: #fff;
+}
+
+.toggle-btn {
+  font-size: 20px;
+  justify-content: center;
+  color: white;
+  background: #0077cc;
+}
+
+/* Hide text when collapsed */
+.sidebar.collapsed .label {
+  display: none;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  transition: all 0.3s ease;
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  color: #0077cc;
+}
+
+.hero {
+  margin: 20px 0;
 }

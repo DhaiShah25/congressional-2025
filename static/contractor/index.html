@@ -2,16 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Collapsible Sidebar</title>
+    <title>Contractors</title>
     <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <nav class="flex justify-between">
-      <div class="flex">
-        <a class="active" href="/">🏠 Home</a>
-        <a class="label" href="/contractor"> 👷 Find a Contractor </a>
-        <a class="label" href="/estimator"> 🖼️ Estimator </a>
-      </div>
+    <nav class="flex">
+      <a class="label" href="/">🏠 Home</a>
+      <a class="active" href="/contractor"> 👷 Find a Contractor </a>
+      <a class="label" href="/estimator"> 🖼️ Estimator </a>
     </nav>
 
     <div class="main-content" id="main">
@@ -23,5 +21,11 @@
         </section>
       </main>
     </div>
+
+    <script>
+      function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("collapsed");
+      }
+    </script>
   </body>
 </html>

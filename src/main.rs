@@ -1,9 +1,9 @@
 use axum::{
-    Router,
     body::Body,
     extract::{Json, State},
     response::{Redirect, Response},
     routing::{get, post},
+    Router,
 };
 use base64::prelude::*;
 use serde::{Deserialize, Serialize};
@@ -13,16 +13,11 @@ async fn main() {
     let service = tower_http::services::ServeDir::new("./static/");
 
     let app = Router::new()
-        .route("/", get(|| async { Redirect::to("/static/index.html") }))
-        .route(
-            "/manifest.json",
-            get(|| async { Redirect::to("/static/manifest.json") }),
-        )
         .route(
             "/favicon.ico",
-            get(|| async { Redirect::to("/static/favicon.svg") }),
+            get(|| async { Redirect::to("/favicon.svg") }),
         )
-        .nest_service("/static", service)
+        .fallback_service(service)
         // Now Api Stuff
         .route("/api/image", post(submit_image))
         .with_state(reqwest::Client::new());
@@ -33,6 +28,7 @@ async fn main() {
 
 #[derive(Debug, Deserialize)]
 struct ImageReq {
+    structure: String,
     image: Vec<u8>,
 }
 
@@ -46,7 +42,7 @@ async fn submit_image(
         .post("http://localhost:11434/api/generate")
         .json(&ModelReq {
             model: "gemma3:4b",
-            prompt: "Hello. Identify safety issues in the image.",
+            prompt: &format!("Estimate the costs to create the following structure in image passed to you. The structure: {}", payload.structure),
             stream: true,
             images: &[&image],
         })

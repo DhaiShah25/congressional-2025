@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -39,4 +41,3 @@
   color: #fff;
   font-size: 100px;
 }
-

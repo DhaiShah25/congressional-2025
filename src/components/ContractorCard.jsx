@@ -7,10 +7,10 @@ export function ContractorCard(props) {
 
     return (
         <Card className="overflow-hidden hover:shadow-xl transition-all">
-            <div className="aspect-square overflow-hidden bg-muted">
+            <div className={"aspect-square overflow-hidden bg-muted" + image ? "" : " pulse"}>
                 <img
                     src={image}
-                    alt={name}
+                    alt={"Picture Of: " + name}
                     className="w-full h-full object-cover"
                 />
             </div>
@@ -34,6 +34,6 @@ export function ContractorCard(props) {
                     <span className="text-sm text-muted-foreground">({reviewCount} reviews)</span>
                 </div>
             </CardContent>
-        </Card>
+        </Card >
     );
 }

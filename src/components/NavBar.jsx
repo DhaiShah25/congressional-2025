@@ -3,6 +3,8 @@ import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './NavBar.css';
 
+import { X, Menu } from 'lucide-react';
+
 function NavBar() {
     const [click, setClick] = useState(false);
     const [button, setButton] = useState(true);
@@ -29,10 +31,10 @@ function NavBar() {
             <nav className='navbar'>
                 <div className='navbar-container'>
                     <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-                        CongApp
+                        Buildwise
                     </Link>
                     <div className='menu-icon' onClick={handleClick}>
-                        <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+                        {click ? <X style={{ width: "2rem", height: "2rem" }} color="white" /> : <Menu style={{ width: "2rem", height: "2rem" }} color="white" />}
                     </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>

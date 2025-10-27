@@ -125,14 +125,8 @@
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(-100%, 60%);
+    transform: translate(-100%, 100%);
     font-size: 1.8rem;
-    cursor: pointer;
-  }
-
-  .fa-times {
-    color: #fff;
-    font-size: 2rem;
   }
 
   .nav-links-mobile {
@@ -156,4 +150,3 @@
     transition: 250ms;
   }
 }
-

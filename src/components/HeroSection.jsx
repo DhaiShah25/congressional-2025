@@ -1,9 +1,7 @@
-import React from 'react';
-import '../App.css';
 import { Button } from './Button';
 import './HeroSection.css';
 
-function HeroSection() {
+export default function HeroSection() {
     return (
         <div className='hero-container'>
             <video src='/videos/Contractor-video1.mp4' autoPlay loop muted />
@@ -29,5 +27,3 @@ function HeroSection() {
         </div>
     );
 }
-
-export default HeroSection;

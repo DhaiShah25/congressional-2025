@@ -1,49 +1,51 @@
-export default function Tv() {
+export default function Shelves() {
     return (
-        <main className="text-lg">
-            <h1 className="font-bold text-4xl text-center">How to Install Shelves</h1>
-            <p>
-                Installing shelves is a quick way to add storage and display space. This guide covers planning, locating supports, mounting brackets or a cleat, cutting and finishing the shelf boards, and checking load capacity so your shelves are both attractive and secure.
-            </p>
+        <div className="grid sm:grid-cols-2">
+            <main className="text-lg sm:w-[80ch] mx-auto p-2">
+                <h1 className="font-bold text-4xl text-center p-2 p-2">How to Install Shelves</h1>
+                <p>
+                    Installing shelves is a quick way to add storage and display space. This guide covers planning, locating supports, mounting brackets or a cleat, cutting and finishing the shelf boards, and checking load capacity so your shelves are both attractive and secure.
+                </p>
 
-            <div class="note">
-                <strong>Safety & load note:</strong> Know the intended load. Small floating shelves hold light items; bracketed or cleat-mounted shelves anchored to studs hold much more. Use proper anchors for drywall-only installations and never exceed the anchor’s rated capacity.
-            </div>
+                <div className="bg-yellow-200 rounded bl-4 border-yellow-400 p-2">
+                    <strong>Safety & load note:</strong> Know the intended load. Small floating shelves hold light items; bracketed or cleat-mounted shelves anchored to studs hold much more. Use proper anchors for drywall-only installations and never exceed the anchor’s rated capacity.
+                </div>
 
-            <h2>Tools & Materials You'll Need</h2>
-            <p>
-                Gather a tape measure, pencil, level, stud finder, drill/driver, appropriate drill bits, screws, wall anchors or lag screws, shelf brackets or a French cleat, saw for cutting boards to length, sandpaper, and optional paint or finish. For heavy-duty shelving, use 2x lumber or plywood and heavy‑duty brackets rated for the expected weight.
-            </p>
+                <h2 className="text-3xl text-center p-2">Tools & Materials You'll Need</h2>
+                <p>
+                    Gather a tape measure, pencil, level, stud finder, drill/driver, appropriate drill bits, screws, wall anchors or lag screws, shelf brackets or a French cleat, saw for cutting boards to length, sandpaper, and optional paint or finish. For heavy-duty shelving, use 2x lumber or plywood and heavy‑duty brackets rated for the expected weight.
+                </p>
 
-            <h2>Step 1: Plan Placement and Size</h2>
-            <p>
-                Decide the shelf length, depth, and vertical spacing. Consider what you will store—books require deeper, stronger shelves than décor—and plan spacing accordingly. Mark the desired height on the wall and use a level to draw a straight reference line for the front edge of the shelf.
-            </p>
+                <h2 className="text-3xl text-center p-2">Step 1: Plan Placement and Size</h2>
+                <p>
+                    Decide the shelf length, depth, and vertical spacing. Consider what you will store—books require deeper, stronger shelves than décor—and plan spacing accordingly. Mark the desired height on the wall and use a level to draw a straight reference line for the front edge of the shelf.
+                </p>
 
-            <h2>Step 2: Find Studs or Choose Anchors</h2>
-            <p>
-                Use a stud finder to locate wall studs along the planned shelf line; studs are the best places to anchor brackets. If studs are not available where you need them, choose appropriate anchors (toggle bolts, molly bolts, or heavy‑duty plastic anchors) rated for the load. Mark stud centers or anchor locations along the reference line.
-            </p>
+                <h2 className="text-3xl text-center p-2">Step 2: Find Studs or Choose Anchors</h2>
+                <p>
+                    Use a stud finder to locate wall studs along the planned shelf line; studs are the best places to anchor brackets. If studs are not available where you need them, choose appropriate anchors (toggle bolts, molly bolts, or heavy‑duty plastic anchors) rated for the load. Mark stud centers or anchor locations along the reference line.
+                </p>
 
-            <h2>Step 3: Mount Brackets or Cleat</h2>
-            <p>
-                For brackets: hold the first bracket so its top aligns with the reference line, transfer screw locations, pre‑drill, and fasten into studs or anchors. Use the level to align the second bracket and fasten it in place. If using a French cleat: mount the wall half to the wall into studs or anchors, level it, then attach the matching half to the shelf so it engages securely.
-            </p>
+                <h2 className="text-3xl text-center p-2">Step 3: Mount Brackets or Cleat</h2>
+                <p>
+                    For brackets: hold the first bracket so its top aligns with the reference line, transfer screw locations, pre‑drill, and fasten into studs or anchors. Use the level to align the second bracket and fasten it in place. If using a French cleat: mount the wall half to the wall into studs or anchors, level it, then attach the matching half to the shelf so it engages securely.
+                </p>
 
-            <h2>Step 4: Cut, Prepare, and Attach the Shelf</h2>
-            <p>
-                Cut the shelf board to the planned length and sand the edges smooth. Dry‑fit the board on the brackets or cleat to check fit. Fasten the shelf to the brackets with screws from underneath if the bracket design allows, or simply rest the shelf on the cleat for an adjustable appearance. Finish the board with paint, stain, or clear coat as desired before or after mounting, depending on convenience.
-            </p>
+                <h2 className="text-3xl text-center p-2">Step 4: Cut, Prepare, and Attach the Shelf</h2>
+                <p>
+                    Cut the shelf board to the planned length and sand the edges smooth. Dry‑fit the board on the brackets or cleat to check fit. Fasten the shelf to the brackets with screws from underneath if the bracket design allows, or simply rest the shelf on the cleat for an adjustable appearance. Finish the board with paint, stain, or clear coat as desired before or after mounting, depending on convenience.
+                </p>
 
-            <h2>Step 5: Test and Load Carefully</h2>
-            <p>
-                Apply a conservative test load gradually—start with light items and increase weight while checking for movement or pull‑out. Re‑tighten hardware after a few days of use. For long shelves, consider adding a center bracket to prevent sag over time.
-            </p>
+                <h2 className="text-3xl text-center p-2">Step 5: Test and Load Carefully</h2>
+                <p>
+                    Apply a conservative test load gradually—start with light items and increase weight while checking for movement or pull‑out. Re‑tighten hardware after a few days of use. For long shelves, consider adding a center bracket to prevent sag over time.
+                </p>
 
+            </main>
             <div class="image">
                 <img src="/shelves_guide.avif" alt="Diagram showing shelf installation: stud finding, mounted brackets, shelf board attached, and anchor types; no people present" />
             </div>
-        </main>
+        </div>
     );
 }
 

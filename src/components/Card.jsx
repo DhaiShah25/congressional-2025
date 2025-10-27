@@ -1,89 +1,76 @@
-import React from "react";
+import React, { forwardRef } from "react";
 
-const Card = React.forwardRef(({ style, children, ...props }, ref) => {
-    const baseStyle = {
-        borderRadius: "12px",
-        border: "1px solid #d1d5db",
-        backgroundColor: "#ffffff",
-        color: "#111827",
-        boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
-        overflow: "hidden",
-    };
-    return (
-        <div ref={ref} style={{ ...baseStyle, ...style }} {...props}>
-            {children}
-        </div>
-    );
-});
+const Card = forwardRef(({ className = "", children, ...props }, ref) => (
+    <div
+        ref={ref}
+        className={`rounded-xl border text-gray-900 shadow-sm overflow-hidden ${className}`}
+        {...props}
+    >
+        {children}
+    </div>
+));
 Card.displayName = "Card";
 
-const CardHeader = React.forwardRef(({ style, children, ...props }, ref) => {
-    const baseStyle = {
-        display: "flex",
-        flexDirection: "column",
-        padding: "16px",
-        gap: "6px",
-    };
-    return (
-        <div ref={ref} style={{ ...baseStyle, ...style }} {...props}>
-            {children}
-        </div>
-    );
-});
+const CardHeader = forwardRef(({ className = "", children, ...props }, ref) => (
+    <div
+        ref={ref}
+        className={`flex flex-col p-4 gap-1.5 ${className}`}
+        {...props}
+    >
+        {children}
+    </div>
+));
 CardHeader.displayName = "CardHeader";
 
-// Card title
-const CardTitle = React.forwardRef(({ style, children, ...props }, ref) => {
-    const baseStyle = {
-        fontSize: "20px",
-        fontWeight: "600",
-        lineHeight: "1.2",
-    };
-    return (
-        <h3 ref={ref} style={{ ...baseStyle, ...style }} {...props}>
-            {children}
-        </h3>
-    );
-});
+const CardTitle = forwardRef(({ className = "", children, ...props }, ref) => (
+    <h3
+        ref={ref}
+        className={`text-xl font-semibold leading-tight ${className}`}
+        {...props}
+    >
+        {children}
+    </h3>
+));
 CardTitle.displayName = "CardTitle";
 
-const CardDescription = React.forwardRef(({ style, children, ...props }, ref) => {
-    const baseStyle = {
-        fontSize: "14px",
-        color: "#6b7280",
-    };
-    return (
-        <p ref={ref} style={{ ...baseStyle, ...style }} {...props}>
-            {children}
-        </p>
-    );
-});
+const CardDescription = forwardRef(({ className = "", children, ...props }, ref) => (
+    <p
+        ref={ref}
+        className={`text-sm text-gray-500 ${className}`}
+        {...props}
+    >
+        {children}
+    </p>
+));
 CardDescription.displayName = "CardDescription";
 
-const CardContent = React.forwardRef(({ style, children, ...props }, ref) => {
-    const baseStyle = {
-        padding: "16px",
-    };
-    return (
-        <div ref={ref} style={{ ...baseStyle, ...style }} {...props}>
-            {children}
-        </div>
-    );
-});
+const CardContent = forwardRef(({ className = "", children, ...props }, ref) => (
+    <div
+        ref={ref}
+        className={`p-4 ${className}`}
+        {...props}
+    >
+        {children}
+    </div>
+));
 CardContent.displayName = "CardContent";
 
-const CardFooter = React.forwardRef(({ style, children, ...props }, ref) => {
-    const baseStyle = {
-        display: "flex",
-        alignItems: "center",
-        padding: "16px",
-    };
-    return (
-        <div ref={ref} style={{ ...baseStyle, ...style }} {...props}>
-            {children}
-        </div>
-    );
-});
+const CardFooter = forwardRef(({ className = "", children, ...props }, ref) => (
+    <div
+        ref={ref}
+        className={`flex items-center p-4 ${className}`}
+        {...props}
+    >
+        {children}
+    </div>
+));
 CardFooter.displayName = "CardFooter";
 
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+export {
+    Card,
+    CardHeader,
+    CardTitle,
+    CardDescription,
+    CardContent,
+    CardFooter,
+};

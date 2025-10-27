@@ -31,7 +31,7 @@ function NavBar() {
             <nav className='navbar'>
                 <div className='navbar-container'>
                     <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-                        Buildwise
+                        <img src="/favicon.svg" className='h-[5rem] p-2 grayscale' alt="logo" /> Buildwise
                     </Link>
                     <div className='menu-icon' onClick={handleClick}>
                         {click ? <X style={{ width: "2rem", height: "2rem" }} color="white" /> : <Menu style={{ width: "2rem", height: "2rem" }} color="white" />}

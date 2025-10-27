@@ -4,8 +4,8 @@ import './HeroSection.css';
 export default function HeroSection() {
     return (
         <div className='hero-container'>
-            <video src='/videos/Contractor-video1.mp4' autoPlay loop muted />
-            <h1>CONTRACTOR TODAY</h1>
+            <video className='brightness-50' src='/videos/Contractor-video1.mp4' autoPlay loop muted aria-hidden="true" />
+            <h1>Improve Your Home Today</h1>
             <p>What are you waiting for?</p>
             <div className='hero-btns'>
                 <Button

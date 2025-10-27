@@ -9,42 +9,42 @@ export default function Cards() {
             <div className='cards__wrapper'>
                 <ul className='cards__items'>
                     <CardItem
-                        src='images/wood-bench.jpg'
+                        src='/wood-bench.avif'
                         text='How to Build a Bench'
                         label='Guide'
-                        path='/contractor'
+                        path='/manuals/bench'
                     />
                     <CardItem
-                        src='images/wooden-gate.jpg'
+                        src='/wooden-gate.avif'
                         text='How to build a Wooden Gate'
                         label='Guide'
-                        path='/contractor'
+                        path='/manuals/gate'
                     />
                     <CardItem
-                        src='images/shelves.jpg'
+                        src='/shelves.avif'
                         text='How to Install Shelves'
                         label='Installation'
-                        path='/contractor' />
+                        path='/manuals/shelves' />
 
                 </ul>
                 <ul className='cards__items'>
                     <CardItem
-                        src='images/window.jpg'
+                        src='/window.avif'
                         text='How to Assemble a Window'
                         label='Guide'
-                        path='/contractor'
+                        path='/manuals/window'
                     />
                     <CardItem
-                        src='images/wooden-fence.jpg'
+                        src='/wooden-fence.avif'
                         text='How to Install a Fence'
                         label='Installation'
-                        path='/image-analyzer'
+                        path='/manuals/fence'
                     />
                     <CardItem
-                        src='images/flatscreen-tv.jpg'
+                        src='/flatscreen-tv.avif'
                         text='How to Mount a TV'
                         label='Guide'
-                        path='/about'
+                        path='/manuals/tv'
                     />
                 </ul>
             </div>

@@ -1,7 +1,7 @@
 export default function Shelves() {
     return (
         <div className="grid sm:grid-cols-2">
-            <main className="text-lg sm:w-[80ch] mx-auto p-2">
+            <main className="text-lg mx-auto p-2">
                 <h1 className="font-bold text-4xl text-center p-2 p-2">How to Install Shelves</h1>
                 <p>
                     Installing shelves is a quick way to add storage and display space. This guide covers planning, locating supports, mounting brackets or a cleat, cutting and finishing the shelf boards, and checking load capacity so your shelves are both attractive and secure.

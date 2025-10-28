@@ -1,7 +1,7 @@
 export default function Window() {
     return (
         <div className="grid sm:grid-cols-2">
-            <main className="text-lg sm:w-[80ch] mx-auto p-2">
+            <main className="text-lg mx-auto p-2">
                 <h1 className="font-bold text-4xl text-center p-2">How to Replace a Window (Insert/Retrofit)</h1>
                 <p>
                     Replacing an old window with an insert, sometimes called a retrofit window, improves comfort and efficiency without removing the exterior siding or interior drywall. This guide explains how to measure the opening, remove the old sash, set and square the new unit, insulate the gaps, and finish the trim for a clean, weather‑tight result.

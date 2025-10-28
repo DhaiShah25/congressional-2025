@@ -1,7 +1,7 @@
 export default function Bench() {
     return (
         <div className="grid sm:grid-cols-2">
-            <main className="text-lg sm:w-[80ch] mx-auto p-2">
+            <main className="text-lg mx-auto p-2">
                 <h1 className="font-bold text-4xl text-center p-2">How to Assemble a Wooden Seating Bench</h1>
                 <p>
                     A wooden seating bench is a practical addition to your home, porch, or garden.

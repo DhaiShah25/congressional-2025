@@ -1,7 +1,7 @@
 export default function Tv() {
     return (
         <div className="grid sm:grid-cols-2">
-            <main className="text-lg sm:w-[80ch] mx-auto p-2">
+            <main className="text-lg mx-auto p-2">
                 <h1 className="font-bold text-4xl text-center p-2">How to Mount a TV</h1>
                 <p>
                     Mounting a TV on the wall saves space and provides a clean, modern look. This guide covers planning placement, locating studs, selecting and attaching the mount, securing the TV, cable management, and final testing.

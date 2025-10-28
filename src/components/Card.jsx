@@ -1,9 +1,9 @@
-import React, { forwardRef } from "react";
+import { forwardRef } from "react";
 
 const Card = forwardRef(({ className = "", children, ...props }, ref) => (
     <div
         ref={ref}
-        className={`rounded-xl border text-gray-900 shadow-sm overflow-hidden ${className}`}
+        className={`rounded-xl border border-zinc-300 text-gray-900 shadow-sm overflow-hidden ${className}`}
         {...props}
     >
         {children}

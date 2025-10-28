@@ -1,4 +1,3 @@
-import React from 'react';
 import '../../App.css';
 import * as Accordion from "@radix-ui/react-accordion";
 import { ChevronDown } from "lucide-react";
@@ -56,6 +55,90 @@ export default function Legal() {
                     Not for minor stuff like painting, new cabinets, or replacing flooring
                 </FaqPart>
             </Accordion.Root>
+
+            <h1 className='text-center font-bold text-3xl font-bold p-2 my-2'>NJ Permit Application Links</h1>
+            <table className='rounded'>
+                <tbody>
+                    <tr className="odd:bg-gray-50 even:bg-gray-100">
+                        <td>UCC Form #</td>
+                        <td>Name</td>
+                        <td>Print-Ready</td>
+                        <td>Fillable</td>
+                    </tr>
+                    <tr className="odd:bg-gray-50 even:bg-gray-100">
+                        <td>F100</td>
+                        <td>Construction Permit Application</td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/pr_f100_cpa.pdf" target="_blank" rel="noopener">F100</a></td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/ucc_f100_cpa.pdf" target="_blank" rel="noopener">F100</a></td>
+                    </tr>
+                    <tr className="odd:bg-gray-50 even:bg-gray-100">
+                        <td>F101-CUPW</td>
+                        <td>Consent to Undertake Proposed Work</td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/pr_f101_cupw.pdf" target="_blank" rel="noopener">F101-CUPW</a></td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/ucc%20F101_cupw.pdf" target="_blank" rel="noopener">F101-CUPW</a></td>
+                    </tr>
+                    <tr className="odd:bg-gray-50 even:bg-gray-100">
+                        <td>F101-HECC</td>
+                        <td>Home Elevation Contractor Certification</td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/pr_f101_hecc.pdf" target="_blank" rel="noopener">F101-HECC</a></td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/ucc%20F101-HECC.pdf" target="_blank" rel="noopener">F101-HECC</a></td>
+                    </tr>
+                    <tr className="odd:bg-gray-50 even:bg-gray-100">
+                        <td>F101-LEAD</td>
+                        <td>Certification of Homeowner,Lead Abatement<br />in Owner-occupied Single-family Dwelling</td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/pr_f101_lead.pdf" target="_blank" rel="noopener">F101-LEAD</a></td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/ucc%20F101-LEAD.pdf" target="_blank" rel="noopener">F101-LEAD</a></td>
+                    </tr>
+                    <tr className="odd:bg-gray-50 even:bg-gray-100">
+                        <td>F102</td>
+                        <td>Annual Permit Application</td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/pr_f102_annual.pdf" target="_blank" rel="noopener">F102</a></td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/f102_annual_perm_app.pdf" target="_blank" rel="noopener">F102</a></td>
+                    </tr>
+                    <tr className="odd:bg-gray-50 even:bg-gray-100">
+                        <td>F110</td>
+                        <td>Building Subcode Technical Section</td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/pr_f110_bldg.pdf" target="_blank" rel="noopener">F110</a></td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/ucc_f110_bldg.pdf" target="_blank" rel="noopener">F110</a></td>
+                    </tr>
+                    <tr className="odd:bg-gray-50 even:bg-gray-100">
+                        <td>F120</td>
+                        <td>Electrical Subcode Technical Section</td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/pr_f120_elec.pdf" target="_blank" rel="noopener">F120</a></td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/ucc_f120_elec.pdf" target="_blank" rel="noopener">F120</a></td>
+                    </tr>
+                    <tr className="odd:bg-gray-50 even:bg-gray-100">
+                        <td>F130</td>
+                        <td>Plumbing Subcode Technical Section</td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/pr_f130_plumb.pdf" target="_blank" rel="noopener">F130</a></td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/ucc_f130_plumb.pdf" target="_blank" rel="noopener">F130</a></td>
+                    </tr>
+                    <tr className="odd:bg-gray-50 even:bg-gray-100">
+                        <td>F140</td>
+                        <td>Fire Protection Subcode Technical Section</td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/pr_f140_fire.pdf" target="_blank" rel="noopener">F140</a></td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/ucc_f140_fire_prot.pdf" target="_blank" rel="noopener">F140</a></td>
+                    </tr>
+                    <tr className="odd:bg-gray-50 even:bg-gray-100">
+                        <td>F145</td>
+                        <td>Mechanical Inspection Technical Section</td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/pr_f145_mech.pdf" target="_blank" rel="noopener">F145</a></td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/ucc_f145_mech_insp.pdf" target="_blank" rel="noopener">F145</a></td>
+                    </tr>
+                    <tr className="odd:bg-gray-50 even:bg-gray-100">
+                        <td>F150</td>
+                        <td>Elevator Subcode Technical Section</td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/pr_f150_elevator.pdf" target="_blank" rel="noopener">F150</a></td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/ucc_f150_elev.pdf" target="_blank" rel="noopener">F150</a></td>
+                    </tr>
+                    <tr className="odd:bg-gray-50 even:bg-gray-100">
+                        <td>F155</td>
+                        <td>Elevator Subcode Supplement for Multiple<br />Equipment</td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/pr_f155_elevator_sup.pdf" target="_blank" rel="noopener">F155</a></td>
+                        <td><a className="underline text-blue-900" href="https://www.nj.govhttps://www.nj.govhttps://www.nj.govhttps://www.nj.gov/dca/codes/forms/pdf_ucc_stdforms/ucc_f155_elev_suppl.pdf" target="_blank" rel="noopener">F155</a></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     );
 }

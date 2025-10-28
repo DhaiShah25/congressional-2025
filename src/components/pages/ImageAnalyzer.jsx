@@ -1,22 +1,16 @@
-import React, { useState, useEffect } from "react";
+import { useState } from "react";
+import Markdown from 'react-markdown'
 import '../../App.css';
 
 export default function ImageAnalyzer() {
     const [file, setFile] = useState(null);
     const [object, setObject] = useState("");
-    const [responses, setResponses] = useState(""); // store streaming responses
+    const [size, setSize] = useState("");
+    const [responses, setResponses] = useState("");
 
-    const handleFileChange = (e) => {
+    const submit = () => {
         setResponses("");
-        const selectedFile = e.target.files[0];
-        if (selectedFile) {
-            setFile(selectedFile);
-        }
-    };
-
-    useEffect(() => {
         if (!file) return;
-
         const reader = new FileReader();
         reader.onloadend = async () => {
             const base64String = reader.result.split(",")[1];
@@ -29,7 +23,7 @@ export default function ImageAnalyzer() {
                         model: "qwen2.5vl:3b",
                         images: [base64String],
                         stream: true,
-                        prompt: `Analyze how expensive it would be to build a ${object} here. Be as consise as possible.`
+                        prompt: `Analyze how expensive it would be to build a ${size.toLowerCase()} ${object.toLowerCase()} at the location in the image. Be as consise as possible. Give an estimated cost in dollars along with steps they should take to build the object. Give a list of recommended materials they should get also and the approximate cost of each.`
                     }),
                 });
 
@@ -50,27 +44,19 @@ export default function ImageAnalyzer() {
 
                     const lines = buffer.split("\n");
                     buffer = lines.pop() || "";
-                    console.log(buffer);
 
                     for (const line of lines) {
                         if (!line.trim()) continue;
                         try {
                             const json = JSON.parse(line);
-                            console.log("Streamed chunk:", json);
 
-                            // Append to state for UI updates
                             setResponses(prev => prev + json.response);
-
-                            if (json.done) {
-                                console.log("Stream completed");
-                            }
                         } catch (e) {
                             console.warn("Failed to parse line:", line);
                         }
                     }
                 }
 
-                // Flush any remaining buffered data
                 if (buffer.trim()) {
                     try {
                         const json = JSON.parse(buffer);
@@ -84,27 +70,57 @@ export default function ImageAnalyzer() {
         };
 
         reader.readAsDataURL(file);
-    }, [file]);
+    };
 
     return (
-        <div className="p-4 grid place-content-center">
-            <input
-                type="text"
-                onChange={(e) => setObject(e.target.value)}
-                className="border p-2 text-2xl rounded"
-            />
+        <div className="mx-auto sm:w-[80ch]">
+            <div className="mx-auto">
+                <label className="py-2 text-xl">
+                    Object You Want To Build:<br />
+                    <input
+                        type="text"
+                        onChange={(e) => setObject(e.target.value)}
+                        placeholder="Deck"
+                        className="border p-2 w-full rounded"
+                    />
+                </label>
 
-            <input
-                type="file"
-                accept="image/*"
-                capture="environment"
-                onChange={handleFileChange}
-                className="border p-2 text-2xl rounded"
-            />
-            <div className="mt-4">
-                <h2 className="font-bold text-lg">Streamed Responses:</h2>
-                <p>{responses}</p>
+                <label className="py-2 text-xl">
+                    Size:<br />
+                    <input
+                        type="text"
+                        onChange={(e) => setSize(e.target.value)}
+                        placeholder="Large"
+                        className="border p-2 w-full rounded"
+                    />
+                </label>
+
+                <label className="py-2 text-xl">
+                    Image Of Building Location:<br />
+                    <input
+                        type="file"
+                        accept="image/*"
+                        capture="environment"
+                        onChange={(e) => {
+                            const selectedFile = e.target.files[0];
+                            if (selectedFile) {
+                                setFile(selectedFile);
+                            }
+                        }}
+                        className="border p-2 text-2xl rounded sm:w-full"
+                    />
+                </label>
+                <button className="bg-zinc-700 text-white p-2 rounded my-2 block mx-auto" onClick={submit}>Submit</button>
             </div>
+            <h1 className="font-bold text-3xl text-center">Cost Estimate & Instructions:</h1>
+            <p className="text-wrap sm:w-[80ch]"><Markdown components={{
+                h1: ({ node, ...props }) => <h1 className="text-3xl font-bold" {...props} />,
+                h2: ({ node, ...props }) => <h2 className="text-2xl" {...props} />,
+                h3: ({ node, ...props }) => <h3 className="text-lg" {...props} />,
+                p: ({ node, ...props }) => <p className="p-2" {...props} />,
+                ol: ({ node, ...props }) => <ol className="list-decimal" {...props} />,
+                ul: ({ node, ...props }) => <ul className="list-disc" {...props} />,
+            }}>{responses}</Markdown></p>
         </div>
     );
 }

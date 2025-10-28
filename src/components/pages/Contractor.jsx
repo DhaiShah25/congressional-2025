@@ -1,11 +1,10 @@
-import React from 'react';
 import '../../App.css';
 import { ContractorCard } from '../ContractorCard';
 
 export default function Contractor() {
     return (
         <>
-            <div className='text-center font-bold bg-yellow-200'>
+            <div className='text-center font-bold bg-yellow-300 w-fit m-auto p-2 rounded my-2'>
                 <h1 className='text-2xl'>Disclaimer: These Contractors Are For The Purpose Of This Demonstration</h1>
                 <p className='text-md'>Any Resemblance To Real People Is Not Intentional</p>
             </div>

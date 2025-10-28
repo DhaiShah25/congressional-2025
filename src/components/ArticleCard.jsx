@@ -31,17 +31,17 @@ export default ArticleCard = ({
         >
             <div className="p-6">
                 <div className="flex items-center justify-between mb-3">
-                    <span className="px-3 py-1 text-xs font-semibold rounded-full bg-gradient-to-r from-primary to-accent text-primary-foreground">
+                    <span className="px-3 py-1 text-xs font-semibold rounded-full">
                         {category}
                     </span>
-                    <span className="text-sm text-muted-foreground">{readTime}</span>
+                    <span className="text-sm">{readTime}</span>
                 </div>
 
-                <h3 className="text-2xl font-bold mb-3 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                <h3 className="text-2xl font-bold mb-3 text-transparent">
                     {title}
                 </h3>
 
-                <p className="text-muted-foreground mb-4 leading-relaxed">{excerpt}</p>
+                <p className="mb-4 leading-relaxed">{excerpt}</p>
 
                 <div
                     className={`overflow-hidden transition-all duration-500 ease-in-out ${isExpanded ? "max-h-[1000px] opacity-100 mb-4" : "max-h-0 opacity-0"

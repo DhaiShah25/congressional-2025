@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "./Card";
 import { Star, MapPin, Briefcase, Phone, Mail } from "lucide-react";
 
@@ -6,8 +5,8 @@ export function ContractorCard(props) {
     const { name, location, rating, reviewCount, experience, image, phoneNumber, email } = props;
 
     return (
-        <Card className="hover:shadow-lg rounded border sm:w-96 h-108 sm:h-auto">
-            <div className={"aspect-square w-[50%] object-cover mx-auto m-2 bg-gray-100 rounded border border rounded-full" + (image ? "" : " pulse")}>
+        <Card className="hover:shadow-lg rounded sm:w-96 h-108 sm:h-auto">
+            <div className={"aspect-square w-[50%] object-cover mx-auto m-2 bg-zinc-100 rounded border border-zinc-300 rounded-full" + (image ? "" : " pulse")}>
                 <img
                     src={image}
                     alt={"Picture Of " + name}
@@ -36,7 +35,7 @@ export function ContractorCard(props) {
                 </div>
                 <div className="flex items-center gap-2">
                     <div className="flex items-center gap-1">
-                        <Star className="h-4 w-4 fill-accent text-accent" />
+                        <Star className="h-4 w-4" />
                         <span className="font-semibold">{rating}</span>
                     </div>
                     <span className="text-sm text-muted-foreground">({reviewCount} reviews)</span>

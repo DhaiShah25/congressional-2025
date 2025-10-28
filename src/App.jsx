@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Home from "./components/pages/Home";
-import About from "./components/pages/About";
+import Legal from "./components/pages/Legal";
 import ImageAnalyzer from "./components/pages/ImageAnalyzer";
 import Contractor from "./components/pages/Contractor";
 
@@ -23,7 +23,7 @@ export default function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/contractor" element={<Contractor />} />
                 <Route path="/image-analyzer" element={<ImageAnalyzer />} />
-                <Route path="/about" element={<About />} />
+                <Route path="/legal" element={<Legal />} />
 
                 <Route path="/manuals/bench" element={<Bench />} />
                 <Route path="/manuals/fence" element={<Fence />} />

@@ -29,7 +29,7 @@ export default function ImageAnalyzer() {
                         model: "qwen2.5vl:3b",
                         images: [base64String],
                         stream: true,
-                        prompt: `Analyze how expensive it would be to build a ${object} here`
+                        prompt: `Analyze how expensive it would be to build a ${object} here. Be as consise as possible.`
                     }),
                 });
 

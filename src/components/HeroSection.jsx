@@ -21,7 +21,7 @@ export default function HeroSection() {
                     buttonSize='btn--large'
                     onClick={console.log('hey')}
                 >
-                    About <i className='far fa-play-circle' />
+                    Legal <i className='far fa-play-circle' />
                 </Button>
             </div>
         </div>

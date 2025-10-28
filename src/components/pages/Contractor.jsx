@@ -9,7 +9,7 @@ export default function Contractor() {
                 <h1 className='text-2xl'>Disclaimer: These Contractors Are For The Purpose Of This Demonstration</h1>
                 <p className='text-md'>Any Resemblance To Real People Is Not Intentional</p>
             </div>
-            <div className="text-center p-2 flex flex-wrap flex-col justify-evenly sm:flex-row gap-2">
+            <div className="text-center p-2 flex flex-wrap flex-col sm:justify-evenly sm:flex-row gap-2">
                 <ContractorCard
                     name="Mark Daniels"
                     location="Dallas–Fort Worth, TX"
